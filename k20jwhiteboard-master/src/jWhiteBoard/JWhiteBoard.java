@@ -255,6 +255,7 @@ public class JWhiteBoard extends ReceiverAdapter implements ActionListener, Chan
     private void sendToAll(byte[] buf) throws Exception {
         for(Address mbr: members)
             channel.send(new Message(mbr, buf));
+        	
     }
 
 
@@ -546,9 +547,9 @@ public class JWhiteBoard extends ReceiverAdapter implements ActionListener, Chan
 		 */
 		private static final long serialVersionUID = 1L;
 		protected final Dimension         preferred_size=new Dimension(235, 170);
-        protected Image                   img; // for drawing pixels
-        protected Dimension               d, imgsize;
-        protected Graphics                gr;
+        protected Image                   img=null; // for drawing pixels
+        protected Dimension               d, imgsize=null;
+        protected Graphics                gr=null;
         protected final Map<Point,Color>  state;
 
 

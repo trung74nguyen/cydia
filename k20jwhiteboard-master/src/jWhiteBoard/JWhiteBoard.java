@@ -341,6 +341,7 @@ public class JWhiteBoard extends ReceiverAdapter implements ActionListener, Chan
                     break;
                 case DrawCommand.CLEAR:
                     clearPanel();
+                    break; //Fixed: missing break in case
                 default:
                     System.err.println("***** received invalid draw command " + comm.mode);
                     break;
@@ -586,7 +587,7 @@ public class JWhiteBoard extends ReceiverAdapter implements ActionListener, Chan
                     Point point=entry.getKey();
                     Color col=entry.getValue();
                     dos.writeInt(point.x);
-                    dos.writeInt(point.x);
+                    dos.writeInt(point.y);//change point.x to point.y
                     dos.writeInt(col.getRGB());
                 }
                 dos.flush();

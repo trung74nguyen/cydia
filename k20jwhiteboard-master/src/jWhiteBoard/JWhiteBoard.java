@@ -243,7 +243,7 @@ public class JWhiteBoard extends ReceiverAdapter implements ActionListener, Chan
         int red=Math.abs(random.nextInt()) % 255;
         int green=Math.abs(random.nextInt()) % 255;
         int blue=Math.abs(random.nextInt()) % 255;
-        return new Color(red, blue, blue);
+        return new Color(red, green, blue); // Fixed: rgb color
     }
 
 

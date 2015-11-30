@@ -284,6 +284,7 @@ public class JWhiteBoard extends ReceiverAdapter implements ActionListener, Chan
         mainFrame.setBackground(backgroundColor);
         clearButton.setForeground(Color.blue);
         leaveButton.setForeground(Color.blue);
+        setTitle(); //Fixed: Title Error
         mainFrame.pack();
         mainFrame.setLocation(15, 25);
         mainFrame.setBounds(new Rectangle(250, 250));
